@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feane</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="feane.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Anton&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Cal+Sans&family=Cinzel:wght@400..900&family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Exile&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oleo+Script:wght@400;700&family=Oswald:wght@200..700&family=Playwrite+HU:wght@100..400&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&family=Savate:ital,wght@0,200..900;1,200..900&family=Underdog&display=swap" rel="stylesheet">
+</head>
+
+    <style>
+        .bar{
+            display: none;
+            color: white;
+            font-size: 30px;
+        }
+        @media (max-width:991px){
+            nav{
+                display: none;
+            }
+            .bar{
+                display: flex;
+
+            }
+            .picture{
+                height: 800px;
+                /* border: 1px solid; */
+                background: url(value1.image.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .value{
+                position: absolute;
+                top: 210px;
+                left: 280px;
+            }
+            .ban{
+                height: 230vw;
+                width: 100%;
+                /* border: 1px solid; */
+            }
+            .are{
+              width:700px;
+              height:200px;
+              /* border: 1px solid; */
+              position: relative;
+              bottom: 900px;
+              right: 100px;
+            }
+            .tomato img{
+                width: 400px;
+                height: 500px;
+                transform: translate(20px,600px);
+            }
+                
+        }
+        @media (max-width:600px){
+            .value{
+                position: absolute;
+                top: 100px;
+                left: 170px;
+            }
+            .menu{
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+            }
+            .our h1{
+              transform: translate(250px,30px);
+            }
+             .ban{
+                height: 230vw;
+                width: 100%;
+                /* border: 1px solid; */
+            }
+            .are{
+              width:700px;
+              height:200px;
+              /* border: 1px solid; */
+              position: relative;
+              bottom: 900px;
+              right: 100px;
+            }
+            .tomato img{
+                width: 400px;
+                height: 500px;
+                transform: translate(20px,600px);
+            }
+        }
+        @media (max-width:480px){
+             .value{
+                position: absolute;
+                top: 100px;
+                left: 130px;
+            }
+             .picture{
+                height: 800px;
+                /* border: 1px solid; */
+                background: url(value1.image.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .menu{
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+            }
+            .our h1{
+              transform: translate(200px,40px);
+            }
+             .ban{
+                height: 230vw;
+                width: 100%;
+                /* border: 1px solid; */
+            }
+            .are{
+              width:700px;
+              height:200px;
+              /* border: 1px solid; */
+              position: relative;
+              bottom: 900px;
+              right: 100px;
+            }
+            .tomato img{
+                width: 400px;
+                height: 500px;
+                transform: translate(20px,600px);
+            }
+            
+        }
+        @media (max-width:350px){
+            .value{
+                position: absolute;
+                top: 100px;
+                left: 130px;
+            }
+             .picture{
+                height: 800px;
+                /* border: 1px solid; */
+                background: url(value1.image.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }            
+            .burger img{
+                background-position: center;
+            }
+            .menu{
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                
+            }
+            .our h1{
+              transform: translate(180px,50px);
+            }
+             .ban{
+                height: 230vw;
+                width: 100%;
+                /* border: 1px solid; */
+            }
+            .are{
+              width:700px;
+              height:200px;
+              /* border: 1px solid; */
+              transform: translate(100px,400px);
+              
+            }
+            .tomato img{
+                width: 300px;
+                height: 400px;
+                transform: translate(10px,400px);
+            }
+            .label input{
+                width: 200px;
+                height: 20px;
+                border: 1px solid;
+            }
+        }
+    </style>
+<body>
+    <div class="feane">
+       
+        <a href="#" id="logo">Feane</a>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Book Table</a></li>
+
+            <div class="icon">
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        
+        <nav class="order">
+            <button>Order Online</button>
+
+        </nav>
+    </nav>
+        <div class="bar">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+        </ul>
+    </div>
+
+    <div class="picture">
+        <div class="value">
+            <h2>Fast Food Restaurant</h2>
+            <p>Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.</p>
+            <button>Order Now</button>
+
+        </div>
+    </div>
+    <br>
+    <div class="sample">
+        <div class="station-1">
+        <div class="burger">
+            <img src="tasty.image.jpg" alt="">
+        </div>
+        <div class="word-1">
+           <h4>Tasty Thursdays</h4>
+           <h2>20% off</h2>
+           <div class="now">
+           <a href="#">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+           </div>
+        </div>
+        </div>
+
+        
+        <div class="station-2">
+        <div class="pizza">
+            <img src="pizza4.iamge.jpg" alt="">
+
+        </div>
+        <div class="word-2">
+           <h4>Pizza Days</h4>
+           <h2>15% off</h2>
+           <div class="now">
+           <a href="#">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+           </div>
+        </div>
+        </div>
+    </div>
+
+    <br>
+<div class="our">
+    <h1>Our menu</h1>
+</div>
+
+    <div class="menu">
+        <li><a href="#">All</a></li>
+        <li><a href="#">Burger</a></li>
+        <li><a href="#">Pizza</a></li>
+        <li><a href="#">Pizza</a></li>
+        <li><a href="#">Fries</a></li>
+
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="flex">
+        <div class="section">
+            <div class="item">
+                <img src="juck.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>Delicious Pizza</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$20</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck1.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>Delicious Burger</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$15</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck2.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4> Delicious Pizza</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$17</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck3.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>Delicious Pasta</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$18</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck4.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>French Fries</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$10</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck5.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>Delicious Pizza</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$15</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck6.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>Tasty Burger</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$12</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck7.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>Tasty Burger</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$14</p>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="item">
+                <img src="juck8.image.avif" alt="">
+            </div>
+            <div class="learn">
+                <h4>Delicious Pasta</h4>
+                <h6>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</h6>
+                <p>$10</p>
+            
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+        <div class="cart">
+        <a href="#">View More</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="ban">
+        <div class="tomato">
+          <img src="value.image.png" alt="">
+        </div>
+        <div class="are">
+            <h2>We Are Feane</h2>
+            <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <br> randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't <br> anything embarrassing hidden in the middle of text. All</h4>
+            <button>Read More</button>
+        </div>
+    </div>
+<br><br>
+    <div class="book">
+        <h1>BOOK TABLE</h1>
+    <div class="label">
+        <input type="text" placeholder="Your Name"> <br>
+        <input type="number contect" placeholder="Phone Number"> <br>
+        <input type="email" placeholder="Your Email"> <br>
+        <select name="" id="how">
+            <option value="">How Many Persons?</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+            <option value="">7</option>
+            <option value="">8</option>
+        </select> <br> <br>
+        <input type="datetime-local">
+    </div>    
+
+    </div>
+</body>
+</html>
